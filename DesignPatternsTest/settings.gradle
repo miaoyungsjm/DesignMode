@@ -1,0 +1,3 @@
+include ':C10_Interpreter'
+include ':app'
+rootProject.name = "Design Patterns Test"
