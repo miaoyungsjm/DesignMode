@@ -20,6 +20,8 @@ public class Calculator {
         // 循环遍历表达式元素数组
         for (int i = 0; i < elements.length; i++) {
             // 判断运算符号
+            System.out.println("elements.length: " + elements.length);
+            System.out.println("elements[" + i + "]: " + elements[i]);
             switch (elements[i].charAt(0)) {
                 case '+':
                     // 将栈中的解释器弹出作为运算符号左边的解释器
@@ -32,7 +34,7 @@ public class Calculator {
                 case '-':
                     exp1 = mExpStack.pop();
                     exp2 = new NumExpression(Integer.valueOf(elements[++i]));
-                    mExpStack.push(new SubrractionExpression(exp1, exp2));
+                    mExpStack.push(new SubtractionExpression(exp1, exp2));
                     break;
                 default:    // 数字
                     // 直接构造数字解释器并压入栈

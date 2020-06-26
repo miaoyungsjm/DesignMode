@@ -1,8 +1,8 @@
 package com.example.c10_interpreter;
 
-public class SubrractionExpression extends OperatorExpression {
+public class SubtractionExpression extends OperatorExpression {
 
-    public SubrractionExpression(ArithmeticExpression exp1, ArithmeticExpression exp2) {
+    public SubtractionExpression(ArithmeticExpression exp1, ArithmeticExpression exp2) {
         super(exp1, exp2);
     }
 
