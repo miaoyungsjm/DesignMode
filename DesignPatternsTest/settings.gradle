@@ -1,3 +1,5 @@
+include ':C12_Observer'
+include ':C11_Command'
 include ':C10_Interpreter'
 include ':app'
 rootProject.name = "Design Patterns Test"
