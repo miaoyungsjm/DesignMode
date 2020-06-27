@@ -1,3 +1,4 @@
+include ':C7_Strategy'
 include ':C8_State'
 include ':C9_Iterator'
 include ':C12_Observer'
