@@ -1,3 +1,4 @@
+include ':C6_AbstractFactory'
 include ':C5_Factory'
 include ':C7_Strategy'
 include ':C8_State'
