@@ -1,3 +1,4 @@
+include ':C19_Composite'
 include ':C18_Proxy'
 include ':C17_Mediator'
 include ':C16_Visitor'
