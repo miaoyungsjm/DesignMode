@@ -1,3 +1,4 @@
+include ':C23_Facade'
 include ':C22_Flyweight'
 include ':C21_Decorator'
 include ':C20_Adapter'
