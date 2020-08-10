@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- data 节点用于声明将会使用到的数据模型 -->
+    <data>
+
+        <variable
+            name="model"
+            type="com.example.mvvmtest.login.LoginModel" />
+    </data>
+
+    <!-- 传统布局根节点 -->
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/et_login_user_id"
+            android:layout_width="@dimen/login_et_width"
+            android:layout_height="wrap_content"
+            android:addTextChangedListener="@{model.getUserTextWatcher}"
+            android:hint="@string/STR_USER_ID"
+            android:text="@{model.mInfo.getUser}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_login_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:addTextChangedListener="@{model.getPasswordTextWatcher}"
+            android:hint="@string/STR_PASSWORD"
+            android:text="@{model.mInfo.getPassword}"
+            app:layout_constraintLeft_toLeftOf="@id/et_login_user_id"
+            app:layout_constraintRight_toRightOf="@id/et_login_user_id"
+            app:layout_constraintTop_toBottomOf="@id/et_login_user_id" />
+
+        <Button
+            android:id="@+id/bt_login_default"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:onClick="@{model.onDefaultClick}"
+            android:text="@string/STR_DEFAULT"
+            app:layout_constraintLeft_toLeftOf="@id/et_login_password"
+            app:layout_constraintRight_toLeftOf="@id/bt_login_confirm"
+            app:layout_constraintTop_toBottomOf="@id/et_login_password" />
+
+        <Button
+            android:id="@+id/bt_login_confirm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:onClick="@{model.onLoginClick}"
+            android:text="@string/STR_CONFIRM"
+            app:layout_constraintLeft_toRightOf="@id/bt_login_default"
+            app:layout_constraintRight_toRightOf="@id/et_login_password"
+            app:layout_constraintTop_toTopOf="@id/bt_login_default" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
